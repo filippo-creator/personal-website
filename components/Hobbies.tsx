@@ -33,7 +33,7 @@ export default function Hobbies() {
           {hobbies.map((h) => (
             <div
               key={h.name}
-              className="flex gap-4 rounded-xl border border-slate-200 p-5"
+              className="flex gap-4 rounded-xl border border-slate-200 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
               <span className="text-2xl">{h.emoji}</span>
               <div>

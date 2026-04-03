@@ -1,27 +1,4 @@
-const experiences = [
-  {
-    company: "Databreeders S.r.l.",
-    role: "Data Scientist",
-    period: "September 2025 – Present",
-    location: "Milan, Italy",
-    bullets: [
-      "Cross-media reach & frequency modelling (Linear TV + BVOD) within the CIM–ToVA measurement framework.",
-      "Audience matching and attribution pipeline development using Python, R, SQL on AWS (S3, Athena, SageMaker).",
-      "Single-source panel calibration and probabilistic exposure estimation across demographic segments.",
-    ],
-  },
-  {
-    company: "Max-Planck-Institut für extraterrestrische Physik (MPE)",
-    role: "Master's Student Researcher",
-    period: "September 2024 – July 2025",
-    location: "Munich, Germany",
-    bullets: [
-      "Built a pipeline to cross-match galaxy supercluster catalogs (SDSS, density-field method — Liivamägi et al. 2012) with cosmic web filaments and critical points extracted via DisPerSE (Morse theory / persistent homology).",
-      "Handled large astronomical catalogs: coordinate transformations (Cartesian → RA/Dec), spatial boundary definition per supercluster, and identification of density peaks and critical point types.",
-      "Core question: do density-based and topological structure-detection methods identify the same physical objects in the large-scale cosmic web?",
-    ],
-  },
-];
+import { experiences } from "@/lib/data";
 
 export default function Experience() {
   return (

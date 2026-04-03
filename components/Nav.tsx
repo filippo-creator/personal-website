@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 const links = [
   { href: "/#experience", label: "Experience" },
   { href: "/#projects", label: "Projects" },
-  { href: "/#hobbies", label: "Hobbies" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/cv", label: "CV" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -28,7 +28,7 @@ export default function Nav() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-slate-600 transition-colors hover:text-slate-900"
+              className="relative text-sm text-slate-600 transition-colors hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-600 after:transition-all hover:after:w-full"
             >
               {l.label}
             </Link>
