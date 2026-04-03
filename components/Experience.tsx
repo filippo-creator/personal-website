@@ -1,31 +1,24 @@
 const experiences = [
   {
-    company: "Acme Corp",
-    role: "Senior Software Engineer",
-    period: "2022 — Present",
+    company: "Databreeders S.r.l.",
+    role: "Data Scientist",
+    period: "September 2025 – Present",
+    location: "Milan, Italy",
     bullets: [
-      "Led development of a real-time analytics dashboard serving 50k+ users.",
-      "Reduced API latency by 40% through query optimization and caching.",
-      "Mentored three junior engineers and drove team coding standards.",
+      "Cross-media reach & frequency modelling (Linear TV + BVOD) within the CIM–ToVA measurement framework.",
+      "Audience matching and attribution pipeline development using Python, R, SQL on AWS (S3, Athena, SageMaker).",
+      "Single-source panel calibration and probabilistic exposure estimation across demographic segments.",
     ],
   },
   {
-    company: "Startup XYZ",
-    role: "Full-Stack Developer",
-    period: "2019 — 2022",
+    company: "Max-Planck-Institut für extraterrestrische Physik (MPE)",
+    role: "Master's Student Researcher",
+    period: "September 2024 – July 2025",
+    location: "Munich, Germany",
     bullets: [
-      "Built the core product from 0→1 using React, Node.js, and PostgreSQL.",
-      "Integrated third-party payment and auth providers.",
-      "Shipped bi-weekly releases with a two-person engineering team.",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Web Developer",
-    period: "2017 — 2019",
-    bullets: [
-      "Delivered websites and web apps for small businesses and agencies.",
-      "Worked across the full stack: design, frontend, backend, and deployment.",
+      "Built a pipeline to cross-match galaxy supercluster catalogs (SDSS, density-field method — Liivamägi et al. 2012) with cosmic web filaments and critical points extracted via DisPerSE (Morse theory / persistent homology).",
+      "Handled large astronomical catalogs: coordinate transformations (Cartesian → RA/Dec), spatial boundary definition per supercluster, and identification of density peaks and critical point types.",
+      "Core question: do density-based and topological structure-detection methods identify the same physical objects in the large-scale cosmic web?",
     ],
   },
 ];
@@ -41,7 +34,6 @@ export default function Experience() {
         <div className="relative border-l border-slate-200 pl-8">
           {experiences.map((exp, i) => (
             <div key={i} className="mb-12 last:mb-0">
-              {/* Timeline dot */}
               <span className="absolute -left-[5px] mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-indigo-600 bg-white" />
 
               <div className="flex flex-wrap items-baseline gap-2">
@@ -51,7 +43,7 @@ export default function Experience() {
                 <span className="text-sm text-slate-500">@ {exp.company}</span>
               </div>
               <p className="mb-3 text-xs font-medium uppercase tracking-wider text-slate-400">
-                {exp.period}
+                {exp.period} · {exp.location}
               </p>
               <ul className="space-y-1.5">
                 {exp.bullets.map((b, j) => (

@@ -10,19 +10,19 @@ export default function Hero() {
         Filippo Guastella
       </h1>
       <p className="mb-6 text-xl text-slate-500">
-        Software Engineer &amp; Builder
+        Data Scientist
       </p>
       <p className="mb-10 max-w-xl text-base leading-relaxed text-slate-600">
-        I design and build software with a focus on clean architecture and great
-        user experiences. Currently exploring ideas at the intersection of data,
-        products, and humans.
+        Data Scientist at Databreeders S.r.l., Milan, specialising in cross-media
+        reach &amp; frequency modelling and audience attribution pipelines.
+        Background in Physics (BSc, Milan) and Astrophysics (MSc, Munich).
       </p>
       <div className="flex flex-wrap gap-4">
         <Link
-          href="/#projects"
+          href="/#experience"
           className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
         >
-          View Projects
+          My Experience
         </Link>
         <Link
           href="/#contact"

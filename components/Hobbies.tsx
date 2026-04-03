@@ -1,10 +1,21 @@
 const hobbies = [
-  { emoji: "📚", name: "Reading", description: "Non-fiction, sci-fi, and the occasional philosophy deep-dive." },
-  { emoji: "🏃", name: "Running", description: "Early morning runs — half marathons a couple times a year." },
-  { emoji: "🎸", name: "Guitar", description: "Self-taught, mostly fingerpicking and classic rock." },
-  { emoji: "✈️", name: "Travel", description: "Slow travel, local food, and getting comfortably lost." },
-  { emoji: "🍳", name: "Cooking", description: "Italian classics and experimenting with fermentation." },
-  { emoji: "🎲", name: "Board Games", description: "Strategy games and the occasional Catan argument." },
+  {
+    emoji: "🚴",
+    name: "Cycling",
+    description:
+      "Road and urban cycling. Volunteer at Ciclochard, a community cycling workshop in Milan.",
+  },
+  {
+    emoji: "🏃",
+    name: "Running",
+    description:
+      "Regular runner. Half marathons and trail runs when the mountains are close enough.",
+  },
+  {
+    emoji: "🌿",
+    name: "Outdoor Sports",
+    description: "Hiking, skiing, anything that gets me outside and moving.",
+  },
 ];
 
 export default function Hobbies() {

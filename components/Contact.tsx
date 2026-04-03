@@ -1,20 +1,15 @@
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/filippoguastella",
+    href: "https://github.com/filippo-creator",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/filippoguastella",
+    href: "https://www.linkedin.com/in/filippo-guastella",
     icon: Linkedin,
-  },
-  {
-    label: "Twitter / X",
-    href: "https://twitter.com/filippoguastella",
-    icon: Twitter,
   },
 ];
 
@@ -31,11 +26,11 @@ export default function Contact() {
         </p>
 
         <a
-          href="mailto:hello@filippoguastella.com"
+          href="mailto:filippo.guastella01@gmail.com"
           className="mb-8 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
         >
           <Mail size={15} />
-          hello@filippoguastella.com
+          filippo.guastella01@gmail.com
         </a>
 
         <div className="flex gap-5">
