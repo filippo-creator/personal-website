@@ -5,7 +5,7 @@ import path from "path";
 
 function hasProfilePhoto() {
   try {
-    return fs.existsSync(path.join(process.cwd(), "public", "profile.jpg"));
+    return fs.existsSync(path.join(process.cwd(), "public", "profile.png"));
   } catch {
     return false;
   }
@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="shrink-0">
           {photoExists ? (
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Filippo Guastella"
               width={200}
               height={200}

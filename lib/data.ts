@@ -29,14 +29,14 @@ export const education = [
     field: "Astrophysics",
     university: "Ludwig Maximilian University (LMU)",
     location: "Munich, Germany",
-    period: "—",
+    period: "2023-2025",
   },
   {
     degree: "BSc",
     field: "Physics",
     university: "Università degli Studi di Milano",
     location: "Milan, Italy",
-    period: "—",
+    period: "2018-2023",
   },
 ];
 
