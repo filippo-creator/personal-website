@@ -16,19 +16,22 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900">
+    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur">
+      <div className="flex items-center justify-between px-8 py-5 md:px-16">
+        <Link
+          href="/"
+          className="font-din text-sm font-bold tracking-mission text-[#f0f0fa]"
+        >
           Filippo Guastella
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden gap-8 md:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="relative text-sm text-slate-600 transition-colors hover:text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-600 after:transition-all hover:after:w-full"
+              className="font-din text-[13px] font-bold tracking-mission text-[rgba(240,240,250,0.65)] transition-colors hover:text-[#f0f0fa]"
             >
               {l.label}
             </Link>
@@ -37,7 +40,7 @@ export default function Nav() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden"
+          className="text-[#f0f0fa] md:hidden"
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
         >
@@ -47,13 +50,13 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="flex flex-col gap-4 border-t border-slate-100 px-6 py-4 md:hidden">
+        <nav className="flex flex-col gap-5 border-t border-[rgba(240,240,250,0.08)] px-8 py-6 md:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-sm text-slate-600 hover:text-slate-900"
+              className="font-din text-[13px] font-bold tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]"
             >
               {l.label}
             </Link>

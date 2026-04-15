@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-100 py-8">
-      <div className="mx-auto max-w-4xl px-6 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Filippo Guastella. Built with Next.js &amp; Tailwind CSS.
-      </div>
+    <footer className="border-t border-[rgba(240,240,250,0.08)] px-8 py-8 md:px-16">
+      <p className="font-din text-[10px] tracking-mission text-[rgba(240,240,250,0.65)]">
+        © {new Date().getFullYear()} Filippo Guastella
+      </p>
     </footer>
   );
 }

@@ -26,29 +26,29 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <div className="mx-auto max-w-2xl px-6 py-20">
+    <div className="px-8 py-20 md:px-16">
       <Link
         href="/blog"
-        className="mb-10 inline-flex items-center gap-1 text-sm text-slate-500 hover:text-slate-900"
+        className="mb-12 inline-flex items-center gap-1 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]"
       >
         ← Back to Blog
       </Link>
 
-      <article>
-        <header className="mb-10">
-          <time className="mb-3 block text-xs font-medium uppercase tracking-widest text-slate-400">
+      <article className="max-w-2xl">
+        <header className="mb-12">
+          <time className="mb-4 block font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
             {new Date(post.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
             })}
           </time>
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          <h1 className="font-din text-4xl font-bold tracking-aerospace text-[#f0f0fa]">
             {post.title}
           </h1>
         </header>
 
-        <div className="prose prose-slate prose-sm sm:prose-base max-w-none">
+        <div className="prose prose-invert prose-sm sm:prose-base max-w-none prose-headings:font-din prose-headings:tracking-aerospace prose-headings:font-bold prose-a:text-[#f0f0fa] prose-p:text-[rgba(240,240,250,0.65)] prose-p:font-din prose-li:text-[rgba(240,240,250,0.65)] prose-li:font-din">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </article>

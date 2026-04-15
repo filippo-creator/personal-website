@@ -8,39 +8,38 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-slate-100 py-20">
-      <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-4 text-2xl font-bold tracking-tight text-slate-900">
-          Get in Touch
-        </h2>
-        <p className="mb-8 max-w-md text-sm leading-relaxed text-slate-600">
-          Whether you want to collaborate, have a question, or just want to say
-          hi — my inbox is open.
-        </p>
+    <section id="contact" className="border-t border-[rgba(240,240,250,0.08)] px-8 py-20 md:px-16">
+      <p className="mb-16 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+        Get in Touch
+      </p>
 
-        <a
-          href={`mailto:${contact.email}`}
-          className="mb-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:from-indigo-700 hover:to-violet-700 hover:shadow-md"
-        >
-          <Mail size={15} />
-          {contact.email}
-        </a>
+      <p className="mb-10 max-w-md font-din text-sm leading-relaxed text-[rgba(240,240,250,0.65)]">
+        Whether you want to collaborate, have a question, or just want to say
+        hi — my inbox is open.
+      </p>
 
-        <div className="flex gap-5">
-          {socials.map(({ label, href, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="flex items-center gap-1.5 text-sm text-slate-500 transition-colors hover:text-slate-900"
-            >
-              <Icon size={16} />
-              {label}
-            </a>
-          ))}
-        </div>
+      <a
+        href={`mailto:${contact.email}`}
+        className="mb-10 inline-flex items-center gap-3 rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] px-7 py-[18px] font-din text-xs font-bold tracking-mission text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)]"
+      >
+        <Mail size={14} />
+        {contact.email}
+      </a>
+
+      <div className="flex gap-6">
+        {socials.map(({ label, href, icon: Icon }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="flex items-center gap-2 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] transition-colors hover:text-[#f0f0fa]"
+          >
+            <Icon size={14} />
+            {label}
+          </a>
+        ))}
       </div>
     </section>
   );

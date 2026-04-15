@@ -7,5 +7,10 @@ html {
 }
 
 body {
-  @apply bg-white text-slate-900 antialiased;
+  @apply antialiased;
+  background-color: #000000;
+  color: #f0f0fa;
+  font-family: var(--font-barlow), Arial, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
