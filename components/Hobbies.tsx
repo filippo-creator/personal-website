@@ -17,20 +17,32 @@ const hobbies = [
 
 export default function Hobbies() {
   return (
-    <section id="hobbies" className="border-t border-[#e9e8e4] px-8 py-16 md:px-16">
-      <h2 className="mb-10 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
-        Outside of Work
-      </h2>
+    <section
+      id="hobbies"
+      className="bg-[#f6f5f4] px-8 py-20 md:px-16"
+      style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+    >
+      <div className="mx-auto max-w-[1200px]">
+        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-[rgba(0,0,0,0.95)]">
+          Outside of Work
+        </h2>
 
-      <div className="max-w-3xl space-y-8">
-        {hobbies.map((h) => (
-          <div key={h.name}>
-            <h3 className="mb-1 font-sans text-base font-semibold text-[#37352f]">
-              {h.name}
-            </h3>
-            <p className="font-sans text-sm text-[#9b9a97]">{h.description}</p>
-          </div>
-        ))}
+        <div className="grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+          {hobbies.map((h) => (
+            <div
+              key={h.name}
+              className="rounded-[12px] bg-white p-6 shadow-notion-card"
+              style={{ border: "1px solid rgba(0,0,0,0.1)" }}
+            >
+              <h3 className="mb-2 text-[16px] font-bold text-[rgba(0,0,0,0.95)]">
+                {h.name}
+              </h3>
+              <p className="text-[14px] leading-[1.5] text-[#615d59]">
+                {h.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -2,44 +2,50 @@ import { Mail, Github, Linkedin } from "lucide-react";
 import { contact } from "@/lib/data";
 
 const socials = [
-  { label: "GitHub", href: contact.github, icon: Github },
-  { label: "LinkedIn", href: contact.linkedin, icon: Linkedin },
+  { label: "GitHub",   href: contact.github,   icon: Github },
+  { label: "LinkedIn", href: contact.linkedin,  icon: Linkedin },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-[#e9e8e4] px-8 py-16 md:px-16">
-      <h2 className="mb-10 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
-        Get in Touch
-      </h2>
+    <section
+      id="contact"
+      className="bg-white px-8 py-20 md:px-16"
+      style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+    >
+      <div className="mx-auto max-w-[1200px]">
+        <h2 className="mb-6 text-[48px] font-bold leading-none tracking-[-1.5px] text-[rgba(0,0,0,0.95)]">
+          Get in Touch
+        </h2>
 
-      <p className="mb-8 max-w-md font-sans text-sm leading-relaxed text-[#9b9a97]">
-        Whether you want to collaborate, have a question, or just want to say
-        hi — my inbox is open.
-      </p>
+        <p className="mb-10 max-w-md text-[20px] font-semibold leading-[1.40] tracking-[-0.125px] text-[#615d59]">
+          Whether you want to collaborate, have a question, or just want to say
+          hi — my inbox is open.
+        </p>
 
-      <a
-        href={`mailto:${contact.email}`}
-        className="mb-8 inline-flex items-center gap-2 rounded-md border border-[#e9e8e4] bg-[#f1f1ef] px-4 py-2 font-sans text-sm text-[#37352f] transition-colors hover:bg-[#e9e8e4]"
-      >
-        <Mail size={14} />
-        {contact.email}
-      </a>
+        <a
+          href={`mailto:${contact.email}`}
+          className="mb-8 inline-flex items-center gap-2 rounded-[4px] bg-[#0075de] px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-[#005bab] active:scale-90"
+        >
+          <Mail size={15} />
+          {contact.email}
+        </a>
 
-      <div className="flex gap-5">
-        {socials.map(({ label, href, icon: Icon }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={label}
-            className="flex items-center gap-1.5 font-sans text-sm text-[#9b9a97] transition-colors hover:text-[#37352f]"
-          >
-            <Icon size={14} />
-            {label}
-          </a>
-        ))}
+        <div className="flex gap-5">
+          {socials.map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="flex items-center gap-1.5 text-[15px] font-medium text-[#615d59] transition-colors hover:text-[rgba(0,0,0,0.95)]"
+            >
+              <Icon size={15} />
+              {label}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

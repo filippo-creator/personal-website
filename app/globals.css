@@ -9,6 +9,9 @@ html {
 body {
   @apply antialiased;
   background-color: #ffffff;
-  color: #37352f;
-  font-family: var(--font-inter), Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.95);
+  font-family: var(--font-inter), Inter, -apple-system, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
 }

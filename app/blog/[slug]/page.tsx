@@ -27,31 +27,33 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="px-8 py-16 md:px-16">
-      <Link
-        href="/blog"
-        className="mb-10 inline-flex items-center gap-1 font-sans text-sm text-[#9b9a97] hover:text-[#37352f]"
-      >
-        ← Back to Blog
-      </Link>
+      <div className="mx-auto max-w-[1200px]">
+        <Link
+          href="/blog"
+          className="mb-10 inline-flex items-center gap-1 text-[15px] font-medium text-[#615d59] transition-colors hover:text-[rgba(0,0,0,0.95)]"
+        >
+          ← Back to Blog
+        </Link>
 
-      <article className="max-w-2xl">
-        <header className="mb-10">
-          <time className="mb-3 block font-sans text-xs text-[#9b9a97]">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
-          <h1 className="font-sans text-3xl font-bold text-[#37352f]">
-            {post.title}
-          </h1>
-        </header>
+        <article className="max-w-2xl">
+          <header className="mb-10">
+            <time className="mb-3 block text-[12px] font-medium tracking-[0.125px] text-[#a39e98]">
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            <h1 className="text-[48px] font-bold leading-none tracking-[-1.5px] text-[rgba(0,0,0,0.95)]">
+              {post.title}
+            </h1>
+          </header>
 
-        <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-semibold prose-headings:text-[#37352f] prose-a:text-[#37352f] prose-p:text-[#9b9a97] prose-p:font-sans prose-li:text-[#9b9a97] prose-li:font-sans">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
-        </div>
-      </article>
+          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-[rgba(0,0,0,0.95)] prose-a:text-[#0075de] prose-a:no-underline hover:prose-a:underline prose-p:text-[#615d59] prose-p:font-sans prose-li:text-[#615d59] prose-li:font-sans">
+            <ReactMarkdown>{post.content}</ReactMarkdown>
+          </div>
+        </article>
+      </div>
     </div>
   );
 }
