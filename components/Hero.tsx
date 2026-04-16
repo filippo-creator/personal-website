@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="flex-1">
             {/* Pill badge */}
             <span className="mb-8 inline-flex items-center rounded-full bg-notion-badge-bg px-3 py-1 text-[12px] font-semibold tracking-[0.125px] text-notion-badge-txt">
-              Data Scientist — Milan
+              Data Scientist · Milan, Italy
             </span>
 
             {/* Display hero heading */}

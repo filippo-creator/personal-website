@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 import { contact } from "@/lib/data";
 
 const socials = [
@@ -14,7 +14,8 @@ export default function Contact() {
       style={{ borderTop: "1px solid var(--notion-border)" }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-6 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+        <h2 className="mb-6 flex items-center gap-3 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+          <MessageCircle size={36} />
           Get in Touch
         </h2>
 

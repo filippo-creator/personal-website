@@ -1,17 +1,22 @@
+import { Smile, Bike, PersonStanding } from "lucide-react";
+
 const hobbies = [
   {
     name: "Cycling",
+    icon: Bike,
     description:
       "Road and urban cycling. Volunteer at Ciclochard, a community cycling workshop in Milan.",
   },
   {
     name: "Running",
+    icon: PersonStanding,
     description:
       "Regular runner. Half marathons and trail runs when the mountains are close enough.",
   },
   {
     name: "Outdoor Sports",
-    description: "Hiking, skiing, anything that gets me outside and moving.",
+    icon: null,
+    description: "",
   },
 ];
 
@@ -23,7 +28,8 @@ export default function Hobbies() {
       style={{ borderTop: "1px solid var(--notion-border)" }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+        <h2 className="mb-12 flex items-center gap-3 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+          <Smile size={36} />
           Outside of Work
         </h2>
 
@@ -34,12 +40,15 @@ export default function Hobbies() {
               className="rounded-[12px] bg-notion-card p-6 shadow-notion-card"
               style={{ border: "1px solid var(--notion-border)" }}
             >
+              {h.icon && <h.icon size={22} className="mb-3 text-notion-gray300" />}
               <h3 className="mb-2 text-[16px] font-bold text-notion-ink">
                 {h.name}
               </h3>
-              <p className="text-[14px] leading-[1.5] text-notion-gray500">
-                {h.description}
-              </p>
+              {h.description && (
+                <p className="text-[14px] leading-[1.5] text-notion-gray500">
+                  {h.description}
+                </p>
+              )}
             </div>
           ))}
         </div>

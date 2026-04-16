@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, FolderKanban } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -8,7 +8,8 @@ export default function Projects() {
       style={{ borderTop: "1px solid var(--notion-border)" }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+        <h2 className="mb-12 flex items-center gap-3 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+          <FolderKanban size={36} />
           Projects
         </h2>
 

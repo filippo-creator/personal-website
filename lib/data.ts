@@ -30,6 +30,9 @@ export const education = [
     university: "Ludwig Maximilian University (LMU)",
     location: "Munich, Germany",
     period: "2023-2025",
+    thesis: "Superclusters as Connected Structures of the Cosmic Web",
+    thesisDescription:
+      "Compared three independent methods for identifying large-scale cosmic structures — density-field thresholding (SDSS), topological filament detection (DisPerSE), and X-ray cluster linking (eROSITA) — to assess their spatial correspondence and complementarity in tracing the Cosmic Web.",
   },
   {
     degree: "BSc",
@@ -37,6 +40,9 @@ export const education = [
     university: "Università degli Studi di Milano",
     location: "Milan, Italy",
     period: "2018-2023",
+    thesis: "Sensitivity Study of JUNO to the Day-Night Modulation of the ⁸B Solar Neutrino Flux",
+    thesisDescription:
+      "Simulated the sensitivity of the JUNO liquid scintillator detector to the Earth-matter-induced day-night asymmetry in the ⁸B solar neutrino flux, testing the MSW effect and neutrino oscillation parameters.",
   },
 ];
 

@@ -1,3 +1,4 @@
+import { BriefcaseBusiness } from "lucide-react";
 import { experiences } from "@/lib/data";
 
 export default function Experience() {
@@ -8,7 +9,8 @@ export default function Experience() {
       style={{ borderTop: "1px solid var(--notion-border)" }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+        <h2 className="mb-12 flex items-center gap-3 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
+          <BriefcaseBusiness size={36} />
           Experience
         </h2>
 
