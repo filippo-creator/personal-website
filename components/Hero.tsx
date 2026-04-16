@@ -9,20 +9,20 @@ export default function Hero() {
           {/* Left: text */}
           <div className="flex-1">
             {/* Pill badge */}
-            <span className="mb-8 inline-flex items-center rounded-full bg-[#f2f9ff] px-3 py-1 text-[12px] font-semibold tracking-[0.125px] text-[#097fe8]">
+            <span className="mb-8 inline-flex items-center rounded-full bg-notion-badge-bg px-3 py-1 text-[12px] font-semibold tracking-[0.125px] text-notion-badge-txt">
               Data Scientist — Milan
             </span>
 
             {/* Display hero heading */}
             <h1
-              className="mb-6 text-[clamp(48px,8vw,96px)] font-bold leading-none text-[rgba(0,0,0,0.95)]"
+              className="mb-6 text-[clamp(48px,8vw,96px)] font-bold leading-none text-notion-ink"
               style={{ letterSpacing: "clamp(-1.5px, -0.022em, -3px)" }}
             >
               Filippo<br />Guastella
             </h1>
 
             {/* Body Large */}
-            <p className="mb-10 max-w-xl text-[20px] font-semibold leading-[1.40] tracking-[-0.125px] text-[#615d59]">
+            <p className="mb-10 max-w-xl text-[20px] font-semibold leading-[1.40] tracking-[-0.125px] text-notion-gray500">
               Data Scientist at Databreeders S.r.l., Milan, specialising in
               cross-media reach &amp; frequency modelling and audience attribution
               pipelines. Background in Physics (BSc, Milan) and Astrophysics (MSc,
@@ -33,13 +33,13 @@ export default function Hero() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/#experience"
-                className="rounded-[4px] bg-[#0075de] px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-[#005bab] active:scale-90"
+                className="rounded-[4px] bg-notion-blue px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-notion-blue-deep active:scale-90"
               >
                 My Experience
               </Link>
               <Link
                 href="/#contact"
-                className="rounded-[4px] bg-[rgba(0,0,0,0.05)] px-4 py-2 text-[15px] font-semibold text-[rgba(0,0,0,0.95)] transition-colors hover:bg-[rgba(0,0,0,0.08)] active:scale-90"
+                className="rounded-[4px] bg-notion-ghost px-4 py-2 text-[15px] font-semibold text-notion-ink transition-colors hover:bg-notion-ghost-hover active:scale-90"
               >
                 Get in Touch
               </Link>
@@ -54,7 +54,7 @@ export default function Hero() {
               width={280}
               height={320}
               className="rounded-[16px] object-cover shadow-notion-deep"
-              style={{ border: "1px solid rgba(0,0,0,0.1)" }}
+              style={{ border: "1px solid var(--notion-border)" }}
               priority
             />
           </div>

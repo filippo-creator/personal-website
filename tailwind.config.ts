@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -9,15 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         notion: {
-          white:      "#ffffff",
-          warm:       "#f6f5f4",
-          ink:        "rgba(0,0,0,0.95)",
-          gray500:    "#615d59",
-          gray300:    "#a39e98",
-          blue:       "#0075de",
-          "blue-deep":"#005bab",
-          "badge-bg": "#f2f9ff",
-          "badge-txt":"#097fe8",
+          bg:           "var(--notion-bg)",
+          warm:         "var(--notion-warm)",
+          card:         "var(--notion-card)",
+          ink:          "var(--notion-ink)",
+          gray500:      "var(--notion-gray500)",
+          gray300:      "var(--notion-gray300)",
+          border:       "var(--notion-border)",
+          ghost:        "var(--notion-ghost)",
+          "ghost-hover":"var(--notion-ghost-hover)",
+          blue:         "var(--notion-blue)",
+          "blue-deep":  "var(--notion-blue-deep)",
+          "badge-bg":   "var(--notion-badge-bg)",
+          "badge-txt":  "var(--notion-badge-txt)",
         },
       },
       fontFamily: {
@@ -25,8 +30,8 @@ const config: Config = {
         din:  ["var(--font-inter)", "Inter", "sans-serif"],
       },
       boxShadow: {
-        "notion-card": "rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.027) 0px 2.025px 7.84688px, rgba(0,0,0,0.02) 0px 0.8px 2.925px, rgba(0,0,0,0.01) 0px 0.175px 1.04062px",
-        "notion-deep": "rgba(0,0,0,0.01) 0px 1px 3px, rgba(0,0,0,0.02) 0px 3px 7px, rgba(0,0,0,0.02) 0px 7px 15px, rgba(0,0,0,0.04) 0px 14px 28px, rgba(0,0,0,0.05) 0px 23px 52px",
+        "notion-card": "var(--notion-shadow-card)",
+        "notion-deep": "var(--notion-shadow-deep)",
       },
     },
   },

@@ -2,14 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Notion design tokens ─────────────────────────────────────── */
+:root {
+  --notion-bg:          #ffffff;
+  --notion-warm:        #f6f5f4;
+  --notion-card:        #ffffff;
+  --notion-ink:         rgba(0,0,0,0.95);
+  --notion-gray500:     #615d59;
+  --notion-gray300:     #a39e98;
+  --notion-border:      rgba(0,0,0,0.1);
+  --notion-ghost:       rgba(0,0,0,0.05);
+  --notion-ghost-hover: rgba(0,0,0,0.08);
+  --notion-blue:        #0075de;
+  --notion-blue-deep:   #005bab;
+  --notion-badge-bg:    #f2f9ff;
+  --notion-badge-txt:   #097fe8;
+  --notion-shadow-card: rgba(0,0,0,0.04) 0px 4px 18px,
+                        rgba(0,0,0,0.027) 0px 2.025px 7.84688px,
+                        rgba(0,0,0,0.02) 0px 0.8px 2.925px,
+                        rgba(0,0,0,0.01) 0px 0.175px 1.04062px;
+  --notion-shadow-deep: rgba(0,0,0,0.01) 0px 1px 3px,
+                        rgba(0,0,0,0.02) 0px 3px 7px,
+                        rgba(0,0,0,0.02) 0px 7px 15px,
+                        rgba(0,0,0,0.04) 0px 14px 28px,
+                        rgba(0,0,0,0.05) 0px 23px 52px;
+}
+
+.dark {
+  --notion-bg:          #191919;
+  --notion-warm:        #202020;
+  --notion-card:        #2f2f2f;
+  --notion-ink:         rgba(255,255,255,0.95);
+  --notion-gray500:     #9b9a97;
+  --notion-gray300:     #787674;
+  --notion-border:      rgba(255,255,255,0.09);
+  --notion-ghost:       rgba(255,255,255,0.07);
+  --notion-ghost-hover: rgba(255,255,255,0.11);
+  --notion-blue:        #2383e2;
+  --notion-blue-deep:   #1a6fc4;
+  --notion-badge-bg:    rgba(35,131,226,0.2);
+  --notion-badge-txt:   #62aef0;
+  --notion-shadow-card: rgba(0,0,0,0.25) 0px 4px 18px,
+                        rgba(0,0,0,0.18) 0px 2.025px 7.84688px,
+                        rgba(0,0,0,0.12) 0px 0.8px 2.925px,
+                        rgba(0,0,0,0.06) 0px 0.175px 1.04062px;
+  --notion-shadow-deep: rgba(0,0,0,0.35) 0px 1px 3px,
+                        rgba(0,0,0,0.28) 0px 3px 7px,
+                        rgba(0,0,0,0.22) 0px 7px 15px,
+                        rgba(0,0,0,0.16) 0px 14px 28px,
+                        rgba(0,0,0,0.1)  0px 23px 52px;
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   @apply antialiased;
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.95);
+  background-color: var(--notion-bg);
+  color: var(--notion-ink);
   font-family: var(--font-inter), Inter, -apple-system, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;

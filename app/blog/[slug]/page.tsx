@@ -30,26 +30,26 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="mx-auto max-w-[1200px]">
         <Link
           href="/blog"
-          className="mb-10 inline-flex items-center gap-1 text-[15px] font-medium text-[#615d59] transition-colors hover:text-[rgba(0,0,0,0.95)]"
+          className="mb-10 inline-flex items-center gap-1 text-[15px] font-medium text-notion-gray500 transition-colors hover:text-notion-ink"
         >
           ← Back to Blog
         </Link>
 
         <article className="max-w-2xl">
           <header className="mb-10">
-            <time className="mb-3 block text-[12px] font-medium tracking-[0.125px] text-[#a39e98]">
+            <time className="mb-3 block text-[12px] font-medium tracking-[0.125px] text-notion-gray300">
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })}
             </time>
-            <h1 className="text-[48px] font-bold leading-none tracking-[-1.5px] text-[rgba(0,0,0,0.95)]">
+            <h1 className="text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
               {post.title}
             </h1>
           </header>
 
-          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-[rgba(0,0,0,0.95)] prose-a:text-[#0075de] prose-a:no-underline hover:prose-a:underline prose-p:text-[#615d59] prose-p:font-sans prose-li:text-[#615d59] prose-li:font-sans">
+          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-notion-ink prose-a:text-notion-blue prose-a:no-underline hover:prose-a:underline prose-p:text-notion-gray500 prose-p:font-sans prose-li:text-notion-gray500 prose-li:font-sans">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
         </article>

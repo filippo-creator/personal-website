@@ -19,11 +19,11 @@ export default function Hobbies() {
   return (
     <section
       id="hobbies"
-      className="bg-[#f6f5f4] px-8 py-20 md:px-16"
-      style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+      className="bg-notion-warm px-8 py-20 md:px-16"
+      style={{ borderTop: "1px solid var(--notion-border)" }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-[rgba(0,0,0,0.95)]">
+        <h2 className="mb-12 text-[48px] font-bold leading-none tracking-[-1.5px] text-notion-ink">
           Outside of Work
         </h2>
 
@@ -31,13 +31,13 @@ export default function Hobbies() {
           {hobbies.map((h) => (
             <div
               key={h.name}
-              className="rounded-[12px] bg-white p-6 shadow-notion-card"
-              style={{ border: "1px solid rgba(0,0,0,0.1)" }}
+              className="rounded-[12px] bg-notion-card p-6 shadow-notion-card"
+              style={{ border: "1px solid var(--notion-border)" }}
             >
-              <h3 className="mb-2 text-[16px] font-bold text-[rgba(0,0,0,0.95)]">
+              <h3 className="mb-2 text-[16px] font-bold text-notion-ink">
                 {h.name}
               </h3>
-              <p className="text-[14px] leading-[1.5] text-[#615d59]">
+              <p className="text-[14px] leading-[1.5] text-notion-gray500">
                 {h.description}
               </p>
             </div>

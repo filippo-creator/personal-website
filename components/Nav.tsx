@@ -16,11 +16,14 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white" style={{ borderBottom: "1px solid rgba(0,0,0,0.1)" }}>
+    <header
+      className="sticky top-0 z-50 bg-notion-bg"
+      style={{ borderBottom: "1px solid var(--notion-border)" }}
+    >
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4 md:px-16">
         <Link
           href="/"
-          className="text-[15px] font-semibold leading-tight text-[rgba(0,0,0,0.95)]"
+          className="text-[15px] font-semibold leading-tight text-notion-ink"
         >
           Filippo Guastella
         </Link>
@@ -31,24 +34,24 @@ export default function Nav() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-[15px] font-medium text-[#615d59] transition-colors hover:text-[rgba(0,0,0,0.95)]"
+              className="text-[15px] font-medium text-notion-gray500 transition-colors hover:text-notion-ink"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        {/* Primary CTA — Notion Blue */}
+        {/* Primary CTA */}
         <Link
           href="/#contact"
-          className="hidden rounded-[4px] bg-[#0075de] px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-[#005bab] active:scale-90 md:inline-flex"
+          className="hidden rounded-[4px] bg-notion-blue px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-notion-blue-deep active:scale-90 md:inline-flex"
         >
           Get in Touch
         </Link>
 
         {/* Mobile toggle */}
         <button
-          className="text-[rgba(0,0,0,0.95)] md:hidden"
+          className="text-notion-ink md:hidden"
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
         >
@@ -59,15 +62,15 @@ export default function Nav() {
       {/* Mobile menu */}
       {open && (
         <nav
-          className="flex flex-col gap-4 bg-white px-8 py-5 md:hidden"
-          style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}
+          className="flex flex-col gap-4 bg-notion-bg px-8 py-5 md:hidden"
+          style={{ borderTop: "1px solid var(--notion-border)" }}
         >
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-[15px] font-medium text-[#615d59] hover:text-[rgba(0,0,0,0.95)]"
+              className="text-[15px] font-medium text-notion-gray500 hover:text-notion-ink"
             >
               {l.label}
             </Link>
@@ -75,7 +78,7 @@ export default function Nav() {
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-1 w-fit rounded-[4px] bg-[#0075de] px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-[#005bab]"
+            className="mt-1 w-fit rounded-[4px] bg-notion-blue px-4 py-2 text-[15px] font-semibold text-white transition-colors hover:bg-notion-blue-deep"
           >
             Get in Touch
           </Link>
