@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: Props) {
             </h1>
           </header>
 
-          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-notion-ink prose-a:text-notion-blue prose-a:no-underline hover:prose-a:underline prose-p:text-notion-gray500 prose-p:font-sans prose-li:text-notion-gray500 prose-li:font-sans">
+          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-notion-ink prose-strong:text-notion-ink prose-a:text-notion-blue prose-a:no-underline hover:prose-a:underline prose-p:text-notion-gray500 prose-p:font-sans prose-li:text-notion-gray500 prose-li:font-sans">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
         </article>
