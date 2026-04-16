@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="px-8 py-20 md:px-16">
+    <div className="px-8 py-16 md:px-16">
       {/* Header */}
-      <div className="mb-16 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mb-12 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="mb-5 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+          <h2 className="mb-3 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
             About Me
-          </p>
-          <p className="max-w-xl font-din text-sm leading-relaxed text-[rgba(240,240,250,0.65)]">
+          </h2>
+          <p className="max-w-xl font-sans text-sm leading-relaxed text-[#9b9a97]">
             I&apos;m a Data Scientist at Databreeders S.r.l. in Milan, where I work on
             cross-media reach &amp; frequency modelling and audience attribution
             pipelines for television and digital advertising. My background is in
@@ -30,7 +30,7 @@ export default function AboutPage() {
         <a
           href="/filippo-guastella-cv.pdf"
           download
-          className="inline-flex shrink-0 items-center gap-3 rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] px-7 py-[18px] font-din text-xs font-bold tracking-mission text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)]"
+          className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#e9e8e4] bg-[#f1f1ef] px-4 py-2 font-sans text-sm text-[#37352f] transition-colors hover:bg-[#e9e8e4]"
         >
           <Download size={14} />
           Download CV

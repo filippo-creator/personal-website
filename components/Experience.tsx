@@ -2,25 +2,25 @@ import { experiences } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-t border-[rgba(240,240,250,0.08)] px-8 py-20 md:px-16">
-      <p className="mb-16 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+    <section id="experience" className="border-t border-[#e9e8e4] px-8 py-16 md:px-16">
+      <h2 className="mb-10 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
         Experience
-      </p>
+      </h2>
 
-      <div className="max-w-3xl space-y-14">
+      <div className="max-w-3xl space-y-12">
         {experiences.map((exp, i) => (
           <div key={i}>
-            <h3 className="mb-1 font-din text-xl font-bold tracking-aerospace text-[#f0f0fa]">
+            <h3 className="mb-1 font-sans text-lg font-semibold text-[#37352f]">
               {exp.role}
             </h3>
-            <p className="mb-5 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
-              {exp.company} — {exp.period} — {exp.location}
+            <p className="mb-4 font-sans text-sm text-[#9b9a97]">
+              {exp.company} · {exp.period} · {exp.location}
             </p>
             <ul className="space-y-2">
               {exp.bullets.map((b, j) => (
                 <li
                   key={j}
-                  className="border-l border-[rgba(240,240,250,0.2)] pl-4 font-din text-sm text-[rgba(240,240,250,0.65)]"
+                  className="border-l-2 border-[#e9e8e4] pl-4 font-sans text-sm text-[#9b9a97]"
                 >
                   {b}
                 </li>

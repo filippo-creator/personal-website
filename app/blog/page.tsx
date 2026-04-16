@@ -11,21 +11,21 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="px-8 py-20 md:px-16">
-      <p className="mb-4 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+    <div className="px-8 py-16 md:px-16">
+      <h2 className="mb-2 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
         Blog
-      </p>
-      <p className="mb-16 max-w-md font-din text-sm text-[rgba(240,240,250,0.65)]">
+      </h2>
+      <p className="mb-12 max-w-md font-sans text-sm text-[#9b9a97]">
         Thoughts, essays, and notes on software, building, and life.
       </p>
 
       {posts.length === 0 ? (
-        <p className="font-din text-sm text-[rgba(240,240,250,0.65)]">No posts yet. Check back soon.</p>
+        <p className="font-sans text-sm text-[#9b9a97]">No posts yet. Check back soon.</p>
       ) : (
-        <div className="divide-y divide-[rgba(240,240,250,0.08)]">
+        <div className="divide-y divide-[#e9e8e4]">
           {posts.map((post) => (
-            <article key={post.slug} className="py-10">
-              <time className="mb-3 block font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+            <article key={post.slug} className="py-8">
+              <time className="mb-2 block font-sans text-xs text-[#9b9a97]">
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -33,16 +33,16 @@ export default function BlogPage() {
                 })}
               </time>
               <Link href={`/blog/${post.slug}`} className="group block">
-                <h2 className="mb-3 font-din text-xl font-bold tracking-aerospace text-[#f0f0fa] transition-colors group-hover:text-[rgba(240,240,250,0.75)]">
+                <h2 className="mb-2 font-sans text-lg font-semibold text-[#37352f] transition-colors group-hover:text-[#9b9a97]">
                   {post.title}
                 </h2>
               </Link>
-              <p className="mb-5 font-din text-sm leading-relaxed text-[rgba(240,240,250,0.65)]">
+              <p className="mb-4 font-sans text-sm leading-relaxed text-[#9b9a97]">
                 {post.excerpt}
               </p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]"
+                className="font-sans text-sm text-[#9b9a97] hover:text-[#37352f]"
               >
                 Read more →
               </Link>

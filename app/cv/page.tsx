@@ -11,11 +11,11 @@ export default function CVPage() {
   return (
     <div className="px-8 py-16 md:px-16 print:py-0">
       {/* Download button — hidden on print */}
-      <div className="mb-12 flex justify-end print:hidden">
+      <div className="mb-10 flex justify-end print:hidden">
         <a
           href="/filippo-guastella-cv.pdf"
           download
-          className="inline-flex items-center gap-3 rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] px-7 py-[18px] font-din text-xs font-bold tracking-mission text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)]"
+          className="inline-flex items-center gap-2 rounded-md border border-[#e9e8e4] bg-[#f1f1ef] px-4 py-2 font-sans text-sm text-[#37352f] transition-colors hover:bg-[#e9e8e4]"
         >
           <Download size={14} />
           Download PDF
@@ -23,64 +23,64 @@ export default function CVPage() {
       </div>
 
       {/* Header */}
-      <header className="mb-12 border-b border-[rgba(240,240,250,0.08)] pb-10">
-        <h1 className="mb-1 font-din text-4xl font-bold tracking-aerospace text-[#f0f0fa]">
+      <header className="mb-10 border-b border-[#e9e8e4] pb-8">
+        <h1 className="mb-1 font-sans text-3xl font-bold text-[#37352f]">
           Filippo Guastella
         </h1>
-        <p className="mb-6 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+        <p className="mb-4 font-sans text-sm text-[#9b9a97]">
           Data Scientist
         </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]">
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 font-sans text-sm text-[#9b9a97] hover:text-[#37352f]">
             <Mail size={12} /> {contact.email}
           </a>
-          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]">
+          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-sans text-sm text-[#9b9a97] hover:text-[#37352f]">
             <Github size={12} /> filippo-creator
           </a>
-          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] hover:text-[#f0f0fa]">
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-sans text-sm text-[#9b9a97] hover:text-[#37352f]">
             <Linkedin size={12} /> filippo-guastella
           </a>
         </div>
       </header>
 
       {/* Education */}
-      <section className="mb-12">
-        <p className="mb-8 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+      <section className="mb-10">
+        <h2 className="mb-6 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
           Education
-        </p>
-        <div className="space-y-6">
+        </h2>
+        <div className="space-y-5">
           {education.map((edu, i) => (
-            <div key={i} className="flex flex-col gap-1 sm:flex-row sm:justify-between">
+            <div key={i} className="flex flex-col gap-0.5 sm:flex-row sm:justify-between">
               <div>
-                <p className="font-din text-sm font-bold tracking-aerospace text-[#f0f0fa]">
+                <p className="font-sans text-sm font-semibold text-[#37352f]">
                   {edu.degree} in {edu.field}
                 </p>
-                <p className="font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">{edu.university} · {edu.location}</p>
+                <p className="font-sans text-sm text-[#9b9a97]">{edu.university} · {edu.location}</p>
               </div>
-              <p className="shrink-0 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">{edu.period}</p>
+              <p className="shrink-0 font-sans text-sm text-[#9b9a97]">{edu.period}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Experience */}
-      <section className="mb-12">
-        <p className="mb-8 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+      <section className="mb-10">
+        <h2 className="mb-6 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
           Experience
-        </p>
-        <div className="space-y-10">
+        </h2>
+        <div className="space-y-8">
           {experiences.map((exp, i) => (
             <div key={i}>
-              <div className="mb-1 flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                <p className="font-din text-sm font-bold tracking-aerospace text-[#f0f0fa]">
+              <div className="mb-0.5 flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                <p className="font-sans text-sm font-semibold text-[#37352f]">
                   {exp.role} — {exp.company}
                 </p>
-                <p className="shrink-0 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">{exp.period}</p>
+                <p className="shrink-0 font-sans text-sm text-[#9b9a97]">{exp.period}</p>
               </div>
-              <p className="mb-3 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">{exp.location}</p>
+              <p className="mb-3 font-sans text-sm text-[#9b9a97]">{exp.location}</p>
               <ul className="space-y-1.5">
                 {exp.bullets.map((b, j) => (
-                  <li key={j} className="border-l border-[rgba(240,240,250,0.2)] pl-4 font-din text-xs text-[rgba(240,240,250,0.65)]">
+                  <li key={j} className="border-l-2 border-[#e9e8e4] pl-4 font-sans text-sm text-[#9b9a97]">
                     {b}
                   </li>
                 ))}
@@ -92,16 +92,16 @@ export default function CVPage() {
 
       {/* Skills */}
       <section>
-        <p className="mb-8 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+        <h2 className="mb-6 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
           Skills
-        </p>
-        <div className="space-y-4">
+        </h2>
+        <div className="space-y-3">
           {skills.map((group) => (
             <div key={group.category} className="flex flex-col gap-1 sm:flex-row sm:items-start">
-              <span className="w-36 shrink-0 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+              <span className="w-36 shrink-0 font-sans text-sm text-[#9b9a97]">
                 {group.category}
               </span>
-              <p className="font-din text-xs text-[#f0f0fa]">{group.items.join(", ")}</p>
+              <p className="font-sans text-sm text-[#37352f]">{group.items.join(", ")}</p>
             </div>
           ))}
         </div>

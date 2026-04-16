@@ -2,20 +2,23 @@ import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="border-t border-[rgba(240,240,250,0.08)] px-8 py-20 md:px-16">
-      <p className="mb-16 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+    <section id="skills" className="border-t border-[#e9e8e4] px-8 py-16 md:px-16">
+      <h2 className="mb-10 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
         Skills
-      </p>
+      </h2>
 
-      <div className="max-w-3xl space-y-8">
+      <div className="max-w-3xl space-y-6">
         {skills.map((group) => (
           <div key={group.category} className="flex flex-col gap-2 sm:flex-row sm:items-start">
-            <span className="w-44 shrink-0 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+            <span className="w-44 shrink-0 font-sans text-sm text-[#9b9a97]">
               {group.category}
             </span>
-            <div className="flex flex-wrap gap-x-6 gap-y-1">
+            <div className="flex flex-wrap gap-2">
               {group.items.map((item) => (
-                <span key={item} className="font-din text-sm text-[#f0f0fa]">
+                <span
+                  key={item}
+                  className="rounded-md bg-[#f1f1ef] px-2.5 py-1 font-sans text-sm text-[#37352f]"
+                >
                   {item}
                 </span>
               ))}

@@ -8,25 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        slate: {
-          950: "#0a0f1e",
-        },
-        space: {
-          black:    "#000000",
-          spectral: "#f0f0fa",
-          muted:    "rgba(240,240,250,0.65)",
-          ghost:    "rgba(240,240,250,0.1)",
-          border:   "rgba(240,240,250,0.35)",
-          divider:  "rgba(240,240,250,0.08)",
+        notion: {
+          bg:     "#ffffff",
+          subtle: "#f7f6f3",
+          hover:  "#f1f1ef",
+          border: "#e9e8e4",
+          text:   "#37352f",
+          muted:  "#9b9a97",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        din:  ["var(--font-barlow)", "Arial", "Verdana", "sans-serif"],
-      },
-      letterSpacing: {
-        aerospace: "0.06em",
-        mission:   "0.09em",
+        din:  ["var(--font-inter)", "Arial", "sans-serif"],
       },
     },
   },

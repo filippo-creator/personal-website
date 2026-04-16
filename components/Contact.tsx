@@ -8,25 +8,25 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-[rgba(240,240,250,0.08)] px-8 py-20 md:px-16">
-      <p className="mb-16 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)]">
+    <section id="contact" className="border-t border-[#e9e8e4] px-8 py-16 md:px-16">
+      <h2 className="mb-10 font-sans text-xs font-semibold uppercase tracking-widest text-[#9b9a97]">
         Get in Touch
-      </p>
+      </h2>
 
-      <p className="mb-10 max-w-md font-din text-sm leading-relaxed text-[rgba(240,240,250,0.65)]">
+      <p className="mb-8 max-w-md font-sans text-sm leading-relaxed text-[#9b9a97]">
         Whether you want to collaborate, have a question, or just want to say
         hi — my inbox is open.
       </p>
 
       <a
         href={`mailto:${contact.email}`}
-        className="mb-10 inline-flex items-center gap-3 rounded-[32px] border border-[rgba(240,240,250,0.35)] bg-[rgba(240,240,250,0.1)] px-7 py-[18px] font-din text-xs font-bold tracking-mission text-[#f0f0fa] transition-colors hover:bg-[rgba(240,240,250,0.18)]"
+        className="mb-8 inline-flex items-center gap-2 rounded-md border border-[#e9e8e4] bg-[#f1f1ef] px-4 py-2 font-sans text-sm text-[#37352f] transition-colors hover:bg-[#e9e8e4]"
       >
         <Mail size={14} />
         {contact.email}
       </a>
 
-      <div className="flex gap-6">
+      <div className="flex gap-5">
         {socials.map(({ label, href, icon: Icon }) => (
           <a
             key={label}
@@ -34,7 +34,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="flex items-center gap-2 font-din text-xs tracking-mission text-[rgba(240,240,250,0.65)] transition-colors hover:text-[#f0f0fa]"
+            className="flex items-center gap-1.5 font-sans text-sm text-[#9b9a97] transition-colors hover:text-[#37352f]"
           >
             <Icon size={14} />
             {label}

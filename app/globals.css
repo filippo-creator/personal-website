@@ -8,9 +8,7 @@ html {
 
 body {
   @apply antialiased;
-  background-color: #000000;
-  color: #f0f0fa;
-  font-family: var(--font-barlow), Arial, Verdana, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  background-color: #ffffff;
+  color: #37352f;
+  font-family: var(--font-inter), Arial, sans-serif;
 }
